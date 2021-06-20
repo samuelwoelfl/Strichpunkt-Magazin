@@ -79,6 +79,24 @@ h3 {
   color: var(--text);
 }
 
+h4 {
+  font-family: var(--utopia);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: .2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .body_text {
   font-family: var(--circular);
   font-weight: 400;
@@ -197,6 +215,10 @@ header nav a {
 footer nav a {
   font-weight: 500;
   color: #fff;
+}
+
+header nav a.active {
+  text-decoration: underline;
 }
 
 header nav .logo {

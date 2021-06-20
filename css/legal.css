@@ -1,0 +1,38 @@
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+article .header {
+  padding-bottom: 5vh;
+  border-bottom: 9px solid var(--primary);
+  margin-bottom: 10vh;
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+}
+
+article .header .subheading {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+article section.impressum {
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+}
+
+h2 {
+  margin-top: 60px;
+}
+
+h3 {
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+ul {
+  padding-left: 30px;
+}
