@@ -155,7 +155,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 13vh 0 6vh;
+  padding: 10vh 0 6vh;
   border-bottom: 1px solid #ccc;
   margin-bottom: 8vh;
 }
@@ -169,11 +169,64 @@ header nav {
   max-width: var(--content-max-width);
 }
 
-header nav a {
+header nav>* {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
   font-family: var(--circular);
-  font-weight: 600;
   font-size: 18px;
   line-height: 26px;
-  color: var(--text);
   text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header nav a {
+  font-weight: 600;
+  color: var(--text);
+}
+
+footer nav a {
+  font-weight: 500;
+  color: #fff;
+}
+
+header nav .logo {
+  padding: 0 5%;
+  margin-top: 40px;
+}
+
+header nav .logo img {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--text);
+  height: 120px;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .inner {
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .inner nav a:first-child {
+  margin-right: 30px;
 }
