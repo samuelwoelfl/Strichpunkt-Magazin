@@ -130,13 +130,14 @@ h3 {
   line-height: 21px;
   color: #fff;
   opacity: 0.7;
-}
-
-.top_bar .inner .article_title {
   text-align: center;
 }
 
-.top_bar .inner .magazin_title {
+.top_bar .inner span:first-child {
+  text-align: left;
+}
+
+.top_bar .inner span:last-child {
   text-align: right;
 }
 
