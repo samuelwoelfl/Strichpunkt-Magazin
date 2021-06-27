@@ -1,3 +1,5 @@
+/* CSS File für alle Seitenübergreifenden Style wie z.B. Farbvariablen und Absatzformate sowie header und footer */
+/* Einbindung einer weiteren Schriftart mit mehreren Schriftschnitten */
 @font-face {
   font-family: "Circular";
   src: url('../font/Circular/lineto-circular-book.woff');
@@ -26,18 +28,14 @@
   font-style: normal;
 }
 
+/* margin, padding und box-sizing für alle Elemente zurücksetzen, sodass man sich nicht mit dem default values rumschlagen muss */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  background: var(--bg);
-}
-
+/* Variablen festlegen */
 :root {
   /* Font/text values */
   --utopia: 'utopia-std', serif;
@@ -52,7 +50,7 @@ html, body {
   --bg: #FBFAF6;
 }
 
-/* Character Styles */
+/* Absatzformate für die Headings */
 h1 {
   font-family: var(--utopia);
   font-weight: 700;
@@ -87,16 +85,7 @@ h4 {
   color: var(--text);
 }
 
-a {
-  text-decoration: none;
-  color: var(--primary);
-  transition: .2s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
+/* Weitere Absatzformate */
 .body_text {
   font-family: var(--circular);
   font-weight: 400;
@@ -121,52 +110,32 @@ a:hover {
   color: #A5A5A5;
 }
 
-.top_bar {
-  height: var(--top_bar-hight);
-  width: 100%;
-  background: var(--primary);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 100;
+/* Style für alle Links */
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: .2s ease;
 }
 
-.top_bar .inner {
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Style für alle Links, wenn man mit der Maus darüber geht */
+a:hover {
+  text-decoration: underline;
 }
 
-.top_bar .inner span {
-  width: 30%;
-  font-family: var(--circular);
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 21px;
-  color: #fff;
-  opacity: 0.7;
-  text-align: center;
+/* Hintergrund setzen */
+body {
+  background: var(--bg);
 }
 
-.top_bar .inner span:first-child {
-  text-align: left;
-}
-
-.top_bar .inner span:last-child {
-  text-align: right;
-}
-
+/* Allen Inhalt horizontal mittig ausrichten */
 .wrapper {
-  padding-top: var(--top_bar-hight);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
+/* Den Header stylen */
 header {
   width: var(--content-width);
   max-width: 1400px;
@@ -179,6 +148,7 @@ header {
   margin-bottom: 8vh;
 }
 
+/* Die Navigation stylen */
 header nav {
   display: flex;
   flex-direction: row;
@@ -188,6 +158,7 @@ header nav {
   max-width: var(--content-max-width);
 }
 
+/* Alle Unterpunkte des Navs stylen */
 header nav>* {
   width: 30%;
   display: flex;
@@ -196,6 +167,7 @@ header nav>* {
   align-items: center;
 }
 
+/* Die Links im Nav in header und footer anpassen */
 nav a {
   font-family: var(--circular);
   font-size: 18px;
@@ -203,33 +175,35 @@ nav a {
   text-decoration: none;
 }
 
+/* Die Links in header und footer im Hover-State anpassen */
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Die Links im header anpassen */
 header nav a {
   font-weight: 600;
   color: var(--text);
 }
 
+/* Die Links im Footer anpassen */
 footer nav a {
   font-weight: 500;
   color: #fff;
 }
 
-header nav a.active {
-  text-decoration: underline;
-}
-
+/* Den Container für das Logo im Header anpassen */
 header nav .logo {
   padding: 0 5%;
   margin-top: 40px;
 }
 
+/* Das Logo im Header anpassen */
 header nav .logo img {
   width: 100%;
 }
 
+/* Den Footer stylen */
 footer {
   width: 100%;
   background-color: var(--text);
@@ -241,6 +215,7 @@ footer {
   align-items: center;
 }
 
+/* Den inneren Teil des Footers stylen, sodass ein Rand nach außen ist */
 footer .inner {
   width: var(--content-width);
   max-width: var(--content-max-width);
@@ -250,6 +225,7 @@ footer .inner {
   align-items: center;
 }
 
+/* Einen Abstand zwischen den beiden Links im Footer hinzufügen */
 footer .inner nav a:first-child {
   margin-right: 30px;
 }

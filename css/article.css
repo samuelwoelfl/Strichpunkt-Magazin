@@ -1,3 +1,53 @@
+/* CSS File für alle speziellen Sachen im Artikel */
+/* Die Infoleiste ganz oben stylen */
+.top_bar {
+  height: var(--top_bar-hight);
+  width: 100%;
+  background: var(--primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+}
+
+/* Den inneren Teil der Leiste stylen, sodass ein Rand nach außen ist */
+.top_bar .inner {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Alle Elemente in der Leiste stylen */
+.top_bar .inner span {
+  width: 30%;
+  font-family: var(--circular);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 21px;
+  color: #fff;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* Das erste Element darin links ausrichten */
+.top_bar .inner span:first-child {
+  text-align: left;
+}
+
+/* Das letzte Element darin rechts ausrichten */
+.top_bar .inner span:last-child {
+  text-align: right;
+}
+
+/* Den ganzen Inhalt um die Höhe der Infoleiste nach unten verschieben, weil diese mit "position: absolut" keine Höhe einnnimmt */
+.wrapper {
+  padding-top: var(--top_bar-hight);
+}
+
+/* Den ganzen Artikel stylen */
 article {
   display: flex;
   flex-direction: column;
@@ -6,6 +56,7 @@ article {
   width: 100%;
 }
 
+/* Die Überschrift vom Artikel stylen */
 article .header {
   padding-bottom: 5vh;
   border-bottom: 9px solid var(--primary);
@@ -14,11 +65,13 @@ article .header {
   max-width: var(--content-max-width);
 }
 
+/* Die Subheading im Kopf-Teil des Artikels stylen */
 article .header .subheading {
   margin-top: 5px;
   margin-bottom: 20px;
 }
 
+/* Den Autorenhinweis stylen */
 article .author {
   font-family: var(--circular);
   font-weight: 600;
@@ -27,6 +80,7 @@ article .author {
   color: var(--text);
 }
 
+/* Die einzelnen Sektionen im Artikel stylen */
 article section.standard {
   display: flex;
   flex-direction: row;
@@ -37,18 +91,22 @@ article section.standard {
   max-width: var(--content-max-width);
 }
 
+/* Die Sektionen so stylen, dass sie immer abwechselnd rechts bzw. links das Bild haben und auch von der Sektion zwischendrin nicht getört werden. */
 article section.standard:nth-child(3n) {
   flex-direction: row-reverse;
 }
 
+/* Breite aller Text-Container und Bild-Container in den Sektionen festlegen */
 article section>* {
   width: 47%;
 }
 
+/* Bilder an Bild-Container anpassen */
 article section .media img {
   width: 100%;
 }
 
+/* Die Video-Sektion anpassen */
 article section.videos {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -61,6 +119,7 @@ article section.videos {
   margin-bottom: 14vh;
 }
 
+/* Den inneren Teil anpassen, damit die Trennlinien darüber und darunter breiter sein können */
 article section.videos .inner {
   display: flex;
   flex-direction: row;
@@ -70,14 +129,17 @@ article section.videos .inner {
   max-width: var(--content-max-width);
 }
 
+/* Die beiden Spalten-Container stlyen */
 article section.videos .inner>* {
   width: 47%;
 }
 
+/* Etwas mehr Abstand unter der H2 hinzufügen, als in den Absatzformaten festgelegt, da hier mehr benötigt wurde */
 article section .video h2 {
   margin-bottom: 30px;
 }
 
+/* Die beiden iFrame Holder sind ein System, damit die iFrames auch immer das gleiche Seitenverhältnis beibehalten, auch wenn die Spalte schmäler wird */
 article section .video .iframe-holder-1 {
   width: 100%;
   margin-bottom: 25px;
@@ -96,6 +158,7 @@ article section .video .iframe-holder-2 iframe {
   height: 100%;
 }
 
+/* Die Fazit Sektion nochmal etwas anpassen */
 article section.fazit {
   width: var(--content-width);
   max-width: var(--content-max-width);
@@ -106,10 +169,12 @@ article section.fazit {
   border-bottom: 9px solid var(--primary);
 }
 
+/* Den Textabschnitt, der für den Tooltip gehovert werden soll unterstreichen */
 article section .tooltip {
   text-decoration: underline;
 }
 
+/* Das Bild im Tooltop schonmal stylen */
 article section .tooltip-content {
   opacity: 0;
   transform: scale(0);
@@ -124,21 +189,25 @@ article section .tooltip-content {
   z-index: 50;
 }
 
+/* Das Bild im Tooltip anpassen */
+article section .tooltip-content img {
+  width: 100%;
+}
+
+/* Den Tooltip einblenden sobald der Textabschnitt gehovert wird */
 article section .tooltip:hover .tooltip-content {
   opacity: 1;
   transform: scale(1);
 }
 
-article section .tooltip-content img {
-  width: 100%;
-}
-
+/*  Die "Viel Spaß beim Stöbern" Sektion unten stylen */
 section.more {
   width: var(--content-width);
   max-width: var(--content-max-width);
   margin-top: 7vh;
 }
 
+/* Den Header in der Sektion stylen */
 section.more .header {
   display: flex;
   flex-direction: row;
@@ -146,12 +215,13 @@ section.more .header {
   align-items: center;
 }
 
+/* Die Illustration rechts oben bei den Artikeln anpassen */
 section.more .header svg {
   width: 20%;
   z-index: 5;
 }
 
-/* ------------- Carousel ----------------- */
+/* Den Carousel-Container anpassen */
 section.more .carousel-body {
   overflow-x: scroll;
   overflow-y: hidden;
@@ -164,10 +234,12 @@ section.more .carousel-body {
   margin-top: -15px;
 }
 
+/* Die Scrollbar im Carousel ausblenden */
 section.more .carousel-body::-webkit-scrollbar {
   display: none;
 }
 
+/* Die einzelnen Vorschläge gescheit ausrichten */
 section.more .carousel-body .carousel-list {
   display: flex;
   flex-direction: row;
@@ -175,6 +247,7 @@ section.more .carousel-body .carousel-list {
   align-items: stretch;
 }
 
+/* Die einzelnen Vorschläge stlyen */
 section.more .carousel-body .carousel-listitem {
   background-color: #fff;
   display: flex;
@@ -188,15 +261,18 @@ section.more .carousel-body .carousel-listitem {
   text-decoration: none;
 }
 
+/* Die Bilder in den Vorschlägen stylen */
 section.more .carousel-body .carousel-listitem img {
   width: 100%;
   margin-bottom: 20px;
 }
 
+/* Die Überschrift in den Vorschlägen anpassen */
 section.more .carousel-body .carousel-listitem h3 {
   margin-bottom: 10px;
 }
 
+/* Den "weiterlesen"-Button in den Vorschlägen anpassen */
 section.more .carousel-body .carousel-listitem .weiter {
   font-family: var(--circular);
   font-weight: 600;
@@ -206,14 +282,14 @@ section.more .carousel-body .carousel-listitem .weiter {
   margin-top: 30px;
 }
 
+/* Den Pfeil im "weiterlesen"-Button anpassen */
 section.more .carousel-body .carousel-listitem .weiter svg {
   width: 17px;
   margin-left: 5px;
   transition: .2s ease;
 }
 
+/* Den Pfeil nach rechts bewegen sobald man darüber hovert */
 section.more .carousel-body .carousel-listitem:hover svg {
   margin-left: 15px;
 }
-
-/* Caroussel end ------------------------------------- */
