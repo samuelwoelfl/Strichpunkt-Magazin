@@ -256,12 +256,11 @@ section.more .carousel-body .carousel-listitem {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 26px;
-  margin-right: 26px;
-  min-width: 350px;
-  width: 42%;
+  margin-right: 3%;
+  width: 31%;
   text-decoration: none;
 }
 
@@ -296,4 +295,8 @@ section.more .carousel-body .carousel-listitem .weiter svg {
 /* Den Pfeil nach rechts bewegen sobald man darüber hovert */
 section.more .carousel-body .carousel-listitem:hover svg {
   margin-left: 15px;
+}
+
+section.more .carousel-body .carousel-listitem:hover h3 {
+  text-decoration: underline;
 }
