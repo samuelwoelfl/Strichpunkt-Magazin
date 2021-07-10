@@ -1,0 +1,160 @@
+.annoucement {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.annoucement .header {
+  padding-bottom: 5vh;
+  margin-bottom: 1vh;
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.annoucement .header h1 {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 2vh;
+  background-image: linear-gradient(var(--primary) 0%, var(--primary) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 85%;
+}
+
+.annoucement .header .subheading {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 5vh;
+}
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+}
+
+/* Die einzelnen Vorschläge stlyen */
+.articles .list-item {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 26px;
+  width: 31%;
+  text-decoration: none;
+  margin-bottom: 26px;
+}
+
+.articles .list-item:nth-child(4n+1), .articles .list-item:nth-child(4n+4) {
+  width: 66%;
+}
+
+/* Die Bilder in den Vorschlägen stylen */
+.articles .list-item img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Die Überschrift in den Vorschlägen anpassen */
+.articles .list-item h3 {
+  margin-bottom: 10px;
+}
+
+/* Den "weiterlesen"-Button in den Vorschlägen anpassen */
+.articles .list-item .weiter {
+  font-family: var(--circular);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text);
+  margin-top: 30px;
+}
+
+/* Den Pfeil im "weiterlesen"-Button anpassen */
+.articles .list-item .weiter svg {
+  width: 17px;
+  margin-left: 5px;
+  transition: .2s ease;
+}
+
+/* Den Pfeil nach rechts bewegen sobald man darüber hovert */
+.articles .list-item:hover svg {
+  margin-left: 15px;
+}
+
+/* Die Überschrift wird unterstrichen sobald man mit der Maus auf einen Artikel geht */
+.articles .list-item:hover h3 {
+  text-decoration: underline;
+}
+
+.contact {
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  margin-top: 20vh;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.contact form * {
+  border-radius: 0px;
+}
+
+.contact form label {
+  font-family: var(--utopia);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.contact form input:not(.submit), .contact form textarea {
+  font-family: var(--circular);
+  font-weight: 400;
+  font-size: 16px;
+  padding: 13px 6px;
+  color: var(--text);
+  margin-bottom: 25px;
+  border: 2px solid #dfdfdf;
+  transition: .1s ease;
+}
+
+.contact form input:not(.submit):focus, .contact form textarea:focus {
+  border: 2px solid var(--primary);
+  outline: none;
+}
+
+::placeholder {
+  color: #aaa;
+}
+
+.contact form .submit {
+  font-family: var(--circular);
+  font-weight: 500;
+  font-size: 18px;
+  padding: 15px 5px;
+  color: #fff;
+  background-color: var(--primary);
+  border: none;
+  transition: .2s ease;
+}
+
+.contact form .submit:hover, .contact form .submit:focus {
+  background-color: #527422;
+  cursor: pointer;
+}
