@@ -92,7 +92,7 @@ article section.standard {
 }
 
 /* Die Sektionen so stylen, dass sie immer abwechselnd rechts bzw. links das Bild haben und auch von der Sektion zwischendrin nicht getört werden. */
-article section.standard:nth-child(3n) {
+article section.standard:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
@@ -102,7 +102,7 @@ article section>* {
 }
 
 /* Bilder an Bild-Container anpassen */
-article section .media img {
+article section .media img:not(.zusammenfassung) {
   width: 100%;
 }
 
@@ -140,17 +140,17 @@ article section .video h2 {
 }
 
 /* Die beiden iFrame Holder sind ein System, damit die iFrames auch immer das gleiche Seitenverhältnis beibehalten, auch wenn die Spalte schmäler wird */
-article section .video .iframe-holder-1 {
+article section .iframe-holder-1 {
   width: 100%;
   margin-bottom: 25px;
 }
 
-article section .video .iframe-holder-2 {
+article section .iframe-holder-2 {
   padding-top: 56.25%;
   position: relative;
 }
 
-article section .video .iframe-holder-2 iframe {
+article section .iframe-holder-2 iframe, article section .iframe-holder-2 video {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -165,8 +165,12 @@ article section.fazit {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+article section:last-child {
   padding-bottom: 15vh;
   border-bottom: 9px solid var(--primary);
+  margin-bottom: 0;
 }
 
 /* Den Textabschnitt, der für den Tooltip gehovert werden soll unterstreichen */
