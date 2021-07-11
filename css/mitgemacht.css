@@ -1,0 +1,70 @@
+/* Style the heading */
+.annoucement {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.annoucement .header {
+  padding-bottom: 5vh;
+  margin-bottom: 1vh;
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.annoucement .header h1 {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 2vh;
+  background-image: linear-gradient(var(--primary) 0%, var(--primary) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 85%;
+}
+
+/* Style the subheading */
+.annoucement .header .subheading {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 5vh;
+}
+
+.authors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: var(--content-width);
+  max-width: var(--content-max-width);
+}
+
+/* Die einzelnen Kacheln stlyen */
+.authors .list-item {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 26px;
+  width: 31%;
+  text-decoration: none;
+  margin-bottom: 26px;
+}
+
+/* Die Bilder in den Kacheln stylen */
+.authors .list-item img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Die Überschrift in den Kacheln anpassen */
+.authors .list-item h3 {
+  margin-bottom: 10px;
+}

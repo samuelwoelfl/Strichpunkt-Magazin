@@ -1,8 +1,10 @@
+/* Inhalt auf die richtige Breite machen */
 article .content {
   width: var(--content-width);
   max-width: var(--content-max-width);
 }
 
+/* Das Zitat stylen */
 blockquote {
   font-family: var(--utopia);
   font-size: 22px;
@@ -15,6 +17,7 @@ blockquote {
   border-bottom: lightgray solid 0.25vw;
 }
 
+/* Den Autor des Zitats stylen */
 div.cite {
   font-family: var(--circular);
   font-size: 16px;
@@ -22,6 +25,7 @@ div.cite {
   font-weight: 300;
 }
 
+/* Die abwechselnden Sektionen aus dem article.css für diesen Artikel überschreiben, weil es hier besser passt */
 article section.standard:nth-child(odd) {
   flex-direction: row;
 }
@@ -37,6 +41,7 @@ div.zusammenfassung {
   margin-bottom: 2em;
 }
 
+/* Die Zusammenfassungs-Kasten stylen */
 img.zusammenfassung {
   position: relative;
   width: 60px;

@@ -91,7 +91,7 @@ article section.standard {
   max-width: var(--content-max-width);
 }
 
-/* Die Sektionen so stylen, dass sie immer abwechselnd rechts bzw. links das Bild haben und auch von der Sektion zwischendrin nicht getört werden. */
+/* Die Sektionen so stylen, dass sie immer abwechselnd rechts bzw. links das Bild haben */
 article section.standard:nth-child(odd) {
   flex-direction: row-reverse;
 }

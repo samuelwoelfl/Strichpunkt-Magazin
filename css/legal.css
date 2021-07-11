@@ -1,3 +1,4 @@
+/* Den generellen Content stylen */
 article {
   display: flex;
   flex-direction: column;
@@ -6,6 +7,7 @@ article {
   width: 100%;
 }
 
+/* Den header bzw. heading stylen */
 article .header {
   padding-bottom: 5vh;
   border-bottom: 9px solid var(--primary);
@@ -14,16 +16,19 @@ article .header {
   max-width: var(--content-max-width);
 }
 
+/* Die subheading stylen */
 article .header .subheading {
   margin-top: 5px;
   margin-bottom: 20px;
 }
 
+/* Den Inhalt an die Breite anpassen */
 article section.impressum {
   width: var(--content-width);
   max-width: var(--content-max-width);
 }
 
+/* Heading Abstände für gute Lesbarkeit anpassen */
 h2 {
   margin-top: 60px;
 }
