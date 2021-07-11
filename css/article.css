@@ -256,7 +256,7 @@ section.more .carousel-body .carousel-listitem {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 26px;
   margin-right: 3%;
